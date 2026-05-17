@@ -1,2 +1,3 @@
 # vox-vfr-public
-Repo public de Vox VFR
+
+[Téléchargement de la dernière version](https://github.com/Octet83/vox-vfr-public/releases/latest/download/VoxVFR_Setup.exe)
