@@ -2,14 +2,32 @@
 
 [⬇️ Télécharger la dernière version](https://github.com/Octet83/vox-vfr-public/releases/latest/download/VoxVFR_Setup.exe)
 
-## Nouveautés v0.18.1
+## Nouveautés v0.19.0
 
-### Corrections
-- **Demande de départ** : dire « je souhaite un départ pour [destination] » au premier contact n'est plus interprété à tort comme un retour au parking. Le contrôleur donne désormais correctement la clairance de roulage au point d'attente.
-- **Attente au point d'attente** : lorsqu'un trafic IA occupe la piste devant vous, plus aucun nouveau trafic n'est généré tant que vous attendez. Vous ne restez bloqué que derrière un seul appareil à la fois, puis la tour vous autorise dès que la piste se libère.
-- **Plus de fausse infraction d'atterrissage** : un rebond léger au toucher des roues ne déclenche plus le message « atterrissage non autorisé » alors que vous étiez bien autorisé. Une fenêtre de 30 secondes protège le poser.
-- **Plus d'instruction « alignez-vous » envoyée en vol** : si vous décollez sans clairance, la tour n'envoie plus une clairance d'alignement absurde quelques minutes plus tard alors que vous êtes déjà à 1500 ft.
+### Trafic IA : refonte complète du système d'injection
+Le système qui injecte et anime le trafic a été entièrement reconstruit, pour
+un trafic réaliste, fluide et réellement piloté par le contrôle.
+- Du trafic vivant sur votre terrain : d'autres avions roulent, décollent,
+  enchaînent des tours de piste et se posent, sur des trajectoires calées sur
+  la géométrie réelle des pistes.
+- Ce trafic est cadencé par le contrôle : file d'attente au départ, numéro de
+  séquence, espacement selon l'intensité, intégration en vent arrière,
+  remise de gaz.
+- Départs et roulages crédibles : point d'attente, alignement, dégagement de
+  piste par les bretelles, retour au parking.
+- Le SIV vous annonce désormais le trafic IA réellement injecté autour de vous,
+  et non plus le trafic IA de MSFS.
+- Mouvements plus fluides et naturels : inclinaison en virage, assiette en
+  montée, décélération à l'atterrissage.
 
-### Trafic IA
-- **Séquence radio respectée** : les trafics IA au départ annoncent désormais « prêt au départ » avant d'être autorisés à s'aligner, conformément à la phraséologie DGAC. Plus de saut direct de « demande roulage » à « aligné prêt au décollage ».
-- **Fin du roulage en lévitation** : les avions IA au sol restent désormais visuellement collés au tarmac pendant le taxi et au point d'attente.
+### Radio
+- Nouveau : demandez un cap au SIV ou à l'Approche pour rejoindre un aérodrome
+  (par exemple « demande un cap pour rejoindre Rennes »). La réponse vous donne
+  le cap et la distance.
+- Meilleure compréhension de vos messages : l'assistant lève les ambiguïtés
+  entre deux demandes proches et rattrape les formulations qu'il ne reconnaît
+  pas du premier coup.
+
+## Corrections v0.19.0
+- Une demande de cap pouvait être prise pour une demande de suivi de vol (et
+  déclenchait un changement de transpondeur) au lieu de donner le cap.
