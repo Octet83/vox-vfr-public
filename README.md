@@ -2,12 +2,6 @@
 
 [⬇️ Télécharger la dernière version](https://github.com/Octet83/vox-vfr-public/releases/latest/download/VoxVFR_Setup.exe)
 
-## Nouveautés v1.2.0
-
-### Corrections du moteur ATC
-- **Tour de piste** : fini la boucle d'autorisation d'atterrissage — la tour ne répète plus la clairance après votre collationnement (et plus de remise de gaz intempestive qui en découlait).
-- **Identification** : annoncer uniquement votre indicatif ne réinitialise plus l'échange en cours avec le contrôle.
-- Plus de « rappelez votre indicatif » intempestif pendant un collationnement.
-- **« Prêt au départ »** est désormais compris une fois aligné et délivre l'autorisation de décollage.
-- **Sortie de CTR** : le collationnement du transpondeur 7000 est correctement pris en compte (plus de « message non compris »).
-- **Dole (LFGJ)** : point d'attente correct annoncé pour la piste 23.
+## Corrections v1.2.1
+- **Démarrage corrigé** — sur certains PC, l'application se fermait immédiatement après l'installation sans rien afficher. Le problème (lié à une dépendance système du build) est résolu : Vox VFR se lance désormais correctement.
+- **SIV affichée correctement** — en se calant sur la fréquence d'une SIV juste avant d'entrer dans son secteur, l'application restait bloquée sur « hors secteur » même une fois à l'intérieur (ex. SIV Limoges 124.050). L'organisme est maintenant reconnu dès l'entrée dans le secteur.
